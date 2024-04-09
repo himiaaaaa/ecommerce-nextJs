@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Hero from "@/app/components/Hero";
+import Newest from "./components/Newest";
 
 export default function Home() {
   return (
     <div>
       <Hero />
+      <Newest />
     </div>
   );
 }
