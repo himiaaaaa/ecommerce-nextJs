@@ -4,14 +4,14 @@ export default {
   title: 'Two Hero Images',
   fields: [
     {
-      name: 'image1',
+      name: 'frontimage',
       type: 'image',
-      title: 'First Image',
+      title: 'Front Image',
     },
     {
-      name: 'image2',
+      name: 'backimage',
       type: 'image',
-      title: 'Second Image',
+      title: 'Back Image',
     },
   ],
 }

@@ -5,6 +5,7 @@ import Link from "next/link";
 async function getData() {
    const query = "*[_type == 'heroImage'][0]"
    const data = await client.fetch(query)
+   console.log('data',data)
    return data;
 }
 
@@ -27,7 +28,7 @@ export default async function Hero() {
         <div className="mb-12 flex w-full md:mb-16 lg:w-2/3">
           <div className="relative left-12 top-12 z-10 -ml-12 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:left-16 md:top-16 lg:ml-0">
             <Image
-              src={urlFor(data.image1).url()}
+              src={urlFor(data.frontimage).url()}
               alt="computer-light"
               className="h-full w-full object-cover object-center"
               priority
@@ -38,7 +39,7 @@ export default async function Hero() {
 
           <div className="overflow-hidden rounded-lg bg-gray-100 shadow-lg">
             <Image
-              src={urlFor(data.image2).url()}
+              src={urlFor(data.backimage).url()}
               alt="computer-dark"
               className="h-full w-full object-cover object-center"
               width={500}
