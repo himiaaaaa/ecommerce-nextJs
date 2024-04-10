@@ -3,10 +3,7 @@
 import Image from "next/image";
 import { urlFor } from "../lib/sanity";
 import { useState } from "react";
-
-interface imageProps {
-  images: any;
-}
+import { imageProps } from "../interface";
 
 export default function ImageGallery({ images }: imageProps) {
   const [bigImage, setBigImage] = useState(images[0]);
@@ -14,6 +11,7 @@ export default function ImageGallery({ images }: imageProps) {
   const handleSmallImageClick = (image: any) => {
     setBigImage(image);
   };
+  
   return (
     <div className="grid gap-4 lg:grid-cols-5">
       {/* Image gallery */}

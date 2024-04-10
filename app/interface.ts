@@ -27,3 +27,6 @@ export interface ProductCart {
   price_id: string;
 }
 
+export interface imageProps {
+  images: any;
+}

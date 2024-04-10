@@ -5,7 +5,7 @@ import Link from "next/link";
 async function getData() {
    const query = "*[_type == 'heroImage'][0]"
    const data = await client.fetch(query)
-   console.log('data',data)
+
    return data;
 }
 
